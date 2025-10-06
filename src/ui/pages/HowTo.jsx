@@ -1,0 +1,1 @@
+export default function HowTo(){return(<div><h2>How to Use</h2><ol><li>Open <strong>Rules</strong> to configure automations.</li><li>Use <strong>Profit</strong> to review daily results.</li><li>Go to <strong>Keywords</strong> and <strong>Inventory</strong> for tactical actions.</li><li>Ask <strong>AI</strong> for suggestions at any time.</li></ol></div>)}

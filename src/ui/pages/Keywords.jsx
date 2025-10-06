@@ -1,0 +1,4 @@
+import {useEffect,useState} from 'react'
+const API_BASE=import.meta.env.VITE_API_BASE_URL||''
+async function apiGet(p){const r=await fetch(`${API_BASE}${p}`);if(!r.ok)throw new Error(`GET ${p} -> ${r.status}`);return r.json()}
+export default function Keywords(){const [data,setData]=useState([]);const [loading,setLoading]=useState(true);const [err,setErr]=useState('');useEffect(()=>{(async()=>{try{setData(await apiGet('/keywords'))}catch(e){setErr(e.message)}finally{setLoading(false)}})()},[]);if(loading)return <p>Loading keywords…</p>;if(err)return <p style={{color:'crimson'}}>Error: {err}</p>;return(<div><h2>Keywords</h2><table className='table'><thead><tr><th>Keyword</th><th>CPC</th><th>Status</th></tr></thead><tbody>{data.map((k,i)=>(<tr key={i}><td>{k.keyword}</td><td>${k.cpc}</td><td>{k.status}</td></tr>))}</tbody></table></div>)}
