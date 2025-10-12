@@ -1,7 +1,0 @@
-@'
-#root, .App { margin: 0 auto; padding: 2rem; text-align: center; }
-.logo { height: 6em; will-change: filter; transition: filter 300ms; }
-.logo:hover { filter: drop-shadow(0 0 1em); }
-.header { display:flex; gap:1rem; align-items:center; justify-content:center; }
-button { padding:.6rem 1rem; font-weight:600; cursor:pointer; }
-'@ | Set-Content -Encoding UTF8 .\src\App.css
