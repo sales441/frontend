@@ -1,24 +1,22 @@
-@'
-import { useState } from "react";
-import viteLogo from "/vite.svg";
-import "./App.css";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+import Login from "./pages/Login.jsx";
+import Dashboard from "./pages/Dashboard.jsx";
+import IA from "./pages/IA.jsx";
+import Ads from "./pages/Ads.jsx";
+import Brands from "./pages/Brands.jsx";
+import Reports from "./pages/Reports.jsx";
 
 export default function App() {
-  const [count, setCount] = useState(0);
   return (
-    <div className="App">
-      <header className="header">
-        <a href="https://vitejs.dev" target="_blank" rel="noreferrer">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <h1>Vikingo Ads Brain™</h1>
-      </header>
-
-      <div className="card">
-        <button onClick={() => setCount((c) => c + 1)}>count is {count}</button>
-        <p>App rodando com Vite + React.</p>
-      </div>
-    </div>
+    <BrowserRouter>
+      <Routes>
+        <Route path="/" element={<Login />} />
+        <Route path="/dashboard" element={<Dashboard />} />
+        <Route path="/ia" element={<IA />} />
+        <Route path="/ads" element={<Ads />} />
+        <Route path="/brands" element={<Brands />} />
+        <Route path="/reports" element={<Reports />} />
+      </Routes>
+    </BrowserRouter>
   );
 }
-'@ | Set-Content -Encoding UTF8 .\src\App.jsx
