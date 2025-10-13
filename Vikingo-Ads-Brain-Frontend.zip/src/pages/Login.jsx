@@ -1,4 +1,13 @@
-﻿import { useState } from "react";
+<div className="flex flex-col items-center justify-center mb-6">
+  <img
+    src="/viking-ship.png"
+    alt="Barco Viking"
+    className="w-20 h-20 animate-bounce"
+  />
+  <h1 className="text-3xl font-bold text-yellow-600 mt-2">Vikingo Ads Brain ⚔️</h1>
+</div>
+
+import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import API from "../services/api.js";
 
@@ -30,3 +39,4 @@ export default function Login() {
     </div>
   );
 }
+
