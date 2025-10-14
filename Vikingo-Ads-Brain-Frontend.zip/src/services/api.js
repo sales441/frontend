@@ -1,9 +1,2 @@
-﻿import axios from "axios";
-
-const API = axios.create({
-  baseURL:
-    import.meta.env.VITE_API_BASE_URL ||
-    "https://backhand-production-bc90.up.railway.app/api",
-});
-
-export default API;
+PS C:\Users\sales> $body = @{ email='ivan@depilcompany.com'; password='Isabella0101@' } | ConvertTo-Json
+PS C:\Users\sales> Invoke-RestMethod -Uri 'https://backhand-production-bc90.up.railway.app/api/auth/login' -Method Post -Body $body -ContentType 'application/json'
